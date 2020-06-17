@@ -7,6 +7,7 @@
 require('./bootstrap');
 
 import Vue from 'vue';
+import $ from 'jquery';
 import VueRouter from 'vue-router';
 Vue.use(VueRouter);
 
@@ -15,10 +16,15 @@ import Home from './components/HomeComponent';
 const router=new VueRouter({
     mode:'history',
     routes:[
-        {patch:'/home',name:'home',component:Home},
-        {patch:'/example',name:'example',component:Example},
+        {path:'/home',name:'home',component:Home},
+        {path:'/example',name:'example',component:Example},
     ]
-})
+});
+// const app = new Vue({
+//     el: '#app',
+//     components:{Home},
+//     router
+// });
 const app = new Vue({
     el: '#app',
     components:{Home},
